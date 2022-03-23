@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>contacto</title>
+    <!--link de css-->
+    <link rel="stylesheet" href="../css/index.css">
+</head>
+<body class="body">
+    <!--comienzo del header-->
+    <header>
+        <nav class="navbar flex-row conteiner">
+            <picture class="logo">
+                <img width="100" height="73" src="../image/logo_mesa-de-trabajo-1.png" alt="logo de la marca">
+            </picture>
+            <ul class="menu flex-row">
+                <li class="menu__item">
+                    <a href="../../index.html" class="menu__link">Home</a>
+                </li>
+                <li class="menu__item">
+                    <a href="./about.html" class="menu__link">Nosotros</a>
+                </li>
+                <li class="menu__item">
+                    <a href="./contact.html" class="menu__link">Contacto</a>
+                </li>
+                <li class="menu__item">
+                    <a href="./gallery.html" class="menu__link">Portfolio</a>
+                </li>
+                <li class="menu__item">
+                    <a href="./service.html" class="menu__link">Servicios</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <!--fin del header-->
+    <!--comienzo del main-->
+    <main>
+        <section> 
+            <div>
+                <form action=""method="POST">
+                    <ul>
+                        <li id="name"><input type="text" name="username" id="username" placeholder="Nombre completo" required="true"></li>
+                        <li id="empresa"><input type="text" name="empresa" id="empresa" placeholder="Nombre de la empresa" required="true"></li>
+                        <li id="email"><input type="email" name="email" id="email" placeholder="Email" required="true"></li>
+                        <li id="tel"><input type="number" name="telefono" id="telefono" placeholder="Telefono" required="true"></li>
+                        <li id="selec"><h4>Selecciona un servicio</h4></li>
+                        <li id="op1"><label for="seleccionunica">Servicio 1</label>
+                                  <input type="radio" name="seleccionunica" id="seleccionunica" required="true"></li>
+                        <li id="op2"><label for="seleccionunica">Servicio 2</label>
+                                  <input type="radio" name="seleccionunica" id="seleccionunica" required="true"></li>
+                        <li id="op3"><label for="seleccionunica">Servicio 3</label>
+                                  <input type="radio" name="seleccionunica" id="seleccionunica" required="true"></li>
+                        <li id="menu"> <label for="empresauno">Negocio</label>
+                                   <select class="menu1" name="empresauno" id="empresauno" required="true">
+                                       <option value="Emprendimiento">Emprendimiento</option>
+                                       <option value="Pime">Pime</option>
+                                   </select></li>
+                        <li id="quiero"><label for="acepta">Quiero resivir informacios de nuevos servicios y ofertas</label>
+                                 <input class="op4" type="checkbox" name="acepta" id="acepta"></li>
+                        <li id="text"><textarea name="aclaraciones" id="aclaraciones" cols="65" rows="14">Dejanos un mensaje</textarea></li>
+                        <li id="env"><button type="submit">Enviar</button></li>
+                        <li id="reset"><button type="reset">Resetear formulario</button></li>
+                    </ul>
+                </form>
+            </div>
+        </section>
+    </main>
+    <!--fin del main-->
+    <!--comienzo del footer-->
+    <footer id="footerFlex" >
+        <nav class="nav flex-row conteiner">
+            <ul class="menu-second flex-row">
+                <li class="menu-second__item">
+                    <a class="menu-second__link" href="./contact.html">Contacto</a>
+                </li>
+                <li class="menu-second__item">
+                    <a class="menu-second__link" href="https://www.behance.net/">Behance</a>
+                </li>
+                <li class="menu-second__item">
+                    <a class="menu-second__link" href="https://www.instagram.com/">Instagram</a>
+                </li>
+            </ul>
+        </nav>
+    </footer> 
+    <!--fin del footer--> 
+</body>
+</html>
