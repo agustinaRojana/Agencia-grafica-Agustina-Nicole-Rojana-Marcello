@@ -83,7 +83,7 @@ header .menu{
 .body{
     display: grid;
     grid-template-columns:auto;
-    grid-template-rows: 20vh 1fr 15vh;
+    grid-template-rows: 15vh 90vh auto;
     grid-template-areas: 
     "header"
     "main "
@@ -111,6 +111,14 @@ header .menu{
     align-items: center;
 
 }
+.img__hijo{
+    transition: all  3s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.img__hijo:hover{
+   width: 50vh;
+   height: 65vh;
+}
 
 #secTwo{
     grid-area: secTwo;
@@ -125,7 +133,11 @@ header .menu{
     font-weight: 700;
     font-size: 3.6em;
     line-height: 4.2rem;
-    color: #00D0AB; 
+    color: #00D0AB;
+    transition: color .6s ease-out;
+}
+.texto__hijone:hover{
+    color:#FF33FF
 }
 
 .texto__hijotwo{
@@ -147,7 +159,7 @@ header .menu{
         "main "
         "footer";
         margin: 0;
-        min-height:auto;
+        min-height:198vh;
     }
     #medio{
         display: grid;
@@ -165,11 +177,25 @@ header .menu{
         justify-content: center;
         align-items: center;
     }
+
+    .img__hijo{
+        transition: all  3s cubic-bezier(0.075, 0.82, 0.165, 1);
+    }
+    
+    .img__hijo:hover{
+       width: 45vh;
+       height: 60vh;
+    }
+    
     #secTwo{
         align-items: center;
     }
     .texto__hijone{
        color: #FF33FF;
+       transition: color .6s ease-out;
+    }
+    .texto__hijone:hover{
+        color: #00D0AB;
     }
     .texto__hijotwo{
         width: 40rem;
@@ -202,7 +228,8 @@ header .menu{
 .about{
     grid-area: about;
     justify-content: center;
-    align-items: end;
+    align-items: center;
+    animation: bloque-rosa 1 ease-in-out 7s;
 }
 
 .list__padre{
@@ -211,6 +238,7 @@ header .menu{
     justify-content: space-around;
 }
 
+
 .historia{
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-style: normal;
@@ -218,8 +246,11 @@ header .menu{
     font-size: 3.6em;
     line-height: 4.2rem;
     color: #00D0AB;
-    
-    
+    transition: color .6s ease-out;
+}
+
+.historia:hover{
+    color: #FF33FF;
 }
 
 .historia__resumen{
@@ -239,6 +270,11 @@ header .menu{
     font-size: 3em;
     line-height: 4rem;
     color: #FF33FF;
+    transition: color .6s ease-out;
+}
+
+.caracteristicas:hover{
+    color: #00D0AB;
 }
 
 .lista__item{
@@ -265,14 +301,14 @@ header .menu{
         grid-area: about;
         justify-content: center;
         align-items: center;
+        animation: bloque-rosa-two 1 ease-in-out 7s;
     }
-    
+
     .list__padre{
         grid-area: list;
         align-items: center;
         justify-content: space-around;
     }
-
     
 }
 /*main about fin*/
@@ -298,3 +334,39 @@ footer .menu-second{
     padding: 1rem;
 }
 /*footer fin */
+
+/*Animaciones*/
+@keyframes bloque-rosa{
+    
+   0%{opacity: 0;
+    width: 41.7rem;
+    height: 0px;
+    }
+
+  50%{
+    width: 41.7rem;
+    opacity: 1;
+   }
+   100%{
+    width: 41.7rem;
+    height: 62.5rem;
+    opacity: 1;
+    } 
+}
+@keyframes bloque-rosa-two{
+    
+    0%{opacity: 0;
+     width: 41.7rem;
+     height: 0px;
+     }
+ 
+   50%{
+     width: 41.7rem;
+     opacity: 1;
+    }
+    100%{
+     width: 41.7rem;
+     height: 42rem;
+     opacity: 1;
+     } 
+ }
