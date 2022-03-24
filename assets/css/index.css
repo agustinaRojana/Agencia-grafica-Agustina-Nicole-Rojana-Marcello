@@ -33,6 +33,17 @@ body{
     background: linear-gradient(332deg, rgba(0,208,171,1) 6%, rgba(255,51,255,1) 100%);   
 }
 
+.body{
+    display: grid;
+    grid-template-columns:auto;
+    grid-template-rows: 15vh 1fr 15vh;
+    grid-template-areas: 
+    "header"
+    "main "
+    "footer";
+    margin: 0;
+    min-height:100vh;
+}
 /*normalize*/
 
 /*helpers*/
@@ -69,8 +80,17 @@ header .logo{
 }
 
 header .menu{
-    flex-basis: 40%;
+    flex-basis: 50%;
     justify-content: space-between;
+}
+
+header .menu__item {
+      /*border-inline: 2px solid #ffff;*/
+      transition: border-inline .3s ease-in;
+}
+
+.menu .menu__item:hover{
+    border-inline: 2px solid #ffff;
 }
 
 .menu .menu__item .menu__link{
@@ -80,16 +100,16 @@ header .menu{
 /*header fin*/
 
 /*main index inc*/
-.body{
+.body__index{
     display: grid;
     grid-template-columns:auto;
-    grid-template-rows: 15vh 90vh auto;
+    grid-template-rows: 15vh 1fr 15vh;
     grid-template-areas: 
     "header"
     "main "
     "footer";
     margin: 0;
-    min-height:100vh;
+    min-height:120vh;
 }
 
 #medio{
@@ -101,7 +121,7 @@ header .menu{
     padding: 20px;
     grid-template-areas: 
     "secOne secTwo";
-    
+    min-height:50vh;
 }
 
 #secOne{
@@ -150,7 +170,7 @@ header .menu{
     width: 50%;
 }
 @media (max-width: 480px){
-    .body{
+    .body__index{
         display: grid;
         grid-template-columns:auto;
         grid-template-rows: 20vh  1fr auto;
@@ -223,13 +243,13 @@ header .menu{
     padding: 20px;
     grid-template-areas: 
     "about list";
+    min-height:110vh;
 }
 
 .about{
     grid-area: about;
     justify-content: center;
     align-items: center;
-    animation: bloque-rosa 1 ease-in-out 7s;
 }
 
 .list__padre{
@@ -286,6 +306,17 @@ header .menu{
     color: #000000;
 }
 @media(max-width: 480px){
+    .body{
+        display: grid;
+        grid-template-columns:auto;
+        grid-template-rows: 20vh  1fr auto;
+        grid-template-areas: 
+        "header"
+        "main "
+        "footer";
+        margin: 0;
+        min-height:198vh;
+    }
     .midel{
         display: grid;
         grid-template-columns: auto ;
@@ -301,7 +332,6 @@ header .menu{
         grid-area: about;
         justify-content: center;
         align-items: center;
-        animation: bloque-rosa-two 1 ease-in-out 7s;
     }
 
     .list__padre{
@@ -313,6 +343,387 @@ header .menu{
 }
 /*main about fin*/
 
+/*main gallery inc*/
+#centro{
+    grid-area: main;
+    display: grid;
+    grid-template-columns: auto ;
+    grid-template-rows: 80vh 30vh;
+    grid-gap: 0px;
+    padding: 0px;
+    grid-template-areas: 
+    "sims"
+    "img ";
+    min-height:120vh;
+    
+}
+
+.galeria{
+    grid-area: img;
+    justify-content: center;
+    align-items: start;
+    
+}
+
+.sims__padre{
+    grid-area: sims;
+    justify-content: center;
+    align-items: end;
+}
+
+#sims{
+    width: 72.5vh;
+    height: 51.3vh;
+}
+
+.galeria__uno #libro{
+    width: 18.2vh;
+    height: 12.3vh;
+}
+
+.galeria__uno #libro1{
+    width: 18.2vh;
+    height: 12.3vh;
+}
+
+.galeria__uno #libro2{
+    width: 18.2vh;
+    height: 12.3vh;
+}
+
+
+.galeria__uno #libro3{
+    width: 18.2vh;
+    height: 12.3vh;
+}
+
+@media(max-width: 480px) {
+    #centro{
+        grid-area: main;
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: 40vh 1fr ;
+        grid-gap: 0px;
+        padding: 0px;
+        grid-template-areas: 
+        "sims"
+        "img ";
+    }
+
+    .sims__padre{
+        grid-area: sims;
+        justify-content: center;
+        align-items: end;
+    }
+
+    .galeria__uno{
+        grid-area: img;  
+        display: flex;
+        flex-direction: column;
+          
+    }
+
+    #sims{
+        width: 32.6vh;
+        height: 23.1vh;
+    }
+    
+    .galeria__uno #libro{
+        width: 32.6vh;
+        height: 23.1vh;
+    }
+    
+    .galeria__uno #libro1{
+        width: 32.6vh;
+        height: 23.1vh;
+    }
+    
+    .galeria__uno #libro2{
+        width: 32.6vh;
+        height: 23.1vh;
+    }
+    
+    
+    .galeria__uno #libro3{
+        width: 32.6vh;
+        height: 23.1vh;
+    }
+}
+/*main gallery fin*/
+
+/*main contact inc*/
+.main__contact{
+    grid-area: main;
+    display: grid;
+    grid-template-columns: auto ;
+    grid-template-rows: auto auto auto auto auto auto 1fr auto;
+    grid-gap: 0px;
+    padding: 0px;
+    grid-template-areas: 
+    "nombre  "
+    "email   "
+    "selec   "
+    "serv    "
+    "neg     "
+    "point   "
+    "tex     "
+    "boton   ";
+    min-height:100vh;
+}
+#from > *{
+    padding: 4rem;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-style: normal;
+}
+
+.name{
+    grid-area: nombre;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 2rem;
+}
+
+#username, 
+#telefono, 
+#empresa, 
+#email{
+    width: 20.8rem;
+    height: 4.2rem;
+    border: none;
+    
+}
+
+.email{
+    grid-area: email;
+    justify-content: space-between;
+    padding: 2rem;
+}
+
+.serv {
+    grid-area: serv;
+    justify-content: space-between;
+    padding: 2rem;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21px;
+
+}
+
+.selec{
+    grid-area: selec;
+}
+
+#selec h4{
+    color: #FF33FF;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 42px;
+} 
+
+.neg #menu label{   
+    font-style: normal;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 42px;
+    color: #FF33FF;
+}
+
+.neg{
+    grid-area: neg;
+    padding: 2rem;
+    line-height: 28px;
+}
+
+.point{
+    grid-area: point;
+    padding: 2rem;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 28px;
+}
+
+.text{
+    grid-area: text;
+    padding: 2rem;
+}
+
+.boton{
+    grid-area: boton;
+    padding: 2rem;
+}
+
+@media(max-width: 480px){
+    .main__contact{
+        grid-area: main;
+        display: grid;
+        grid-template-columns: auto ;
+        grid-template-rows: auto auto auto auto auto auto 1fr auto;
+        grid-gap: 0px;
+        padding: 0px;
+        grid-template-areas: 
+        "nombre  "
+        "email   "
+        "selec   "
+        "serv    "
+        "neg     "
+        "point   "
+        "tex     "
+        "boton   ";
+        min-height:200vh;
+    }
+    
+    .name{
+        grid-area: nombre;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 6rem;
+       
+    }
+    .email{
+        grid-area: email;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 6rem;
+    }
+
+    .selec{
+        grid-area: selec;
+        padding: 6rem;
+    }
+
+    .serv{
+        grid-area: serv;
+        padding: 6rem;
+    }
+
+    .neg{
+        grid-area: neg;
+        padding: 6rem;
+    }
+
+    .point{
+        grid-area: point;
+        padding: 6rem;
+    }
+
+    .text{
+        grid-area: text;
+        padding: 6rem;
+    }
+
+    .boton{
+        grid-area: boton;
+        padding: 6rem;
+    }
+}
+/*main contact fin*/
+
+/*main contact fin*/
+
+.main__service{
+    grid-area: main;
+    display: grid;
+    grid-template-columns: 1fr ;
+        grid-template-rows: 10vh 20vh 20vh 20vh;
+        grid-gap: 10px;
+        padding: 10px;
+        grid-template-areas:
+        "ser" 
+        "ser__1"
+        "ser__2"
+        "ser__3";
+        min-height:100vh;
+}
+
+.titel__service{
+    grid-area: ser;
+    justify-content: center;
+}
+
+.sevicio__one{
+    grid-area: ser__1;
+    
+}
+
+
+.servicio__two{
+    grid-area: ser__2;
+}
+
+.servicio__three{
+    grid-area: ser__3;
+}
+
+.servicio__one article p, 
+.servicio__two article p, 
+.servicio__three article p{
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-style: normal;
+    font-size: 1.2em;
+    line-height: 1.4rem;
+    color: #000000;
+    padding-left: 20rem;
+    
+}
+
+.servicio__one article h3, 
+.servicio__two article h3, 
+.servicio__three article h3{
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 2em;
+    line-height: 4rem;
+    color: #FF33FF;
+    padding-left: 17rem;
+}
+
+.service__h2{
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 4em;
+    line-height: 4rem;
+    color: #00D0AB;
+}
+
+@media(max-width: 480px){
+
+    .main__service{
+        
+        grid-gap: 20rem;
+        padding: 10px;
+            
+    }
+
+    .servicio__one article p, 
+    .servicio__two article p, 
+    .servicio__three article p{
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-style: normal;
+        font-size: 1.2em;
+        line-height: 1.4rem;
+        color: #000000;
+        padding-left: 3rem;
+    }
+
+    .servicio__one article h3, 
+    .servicio__two article h3, 
+    .servicio__three article h3{
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 2em;
+        line-height: 4rem;
+        color: #FF33FF;
+        padding-left: 3rem;
+        
+    }
+}
+/*main contact fin*/
+
+
 /*footerx inc*/
 footer{
     grid-area: footer;
@@ -323,6 +734,14 @@ footer .nav{
     padding: 0 2rem;
     min-height: 15vh;
     justify-content: space-between;
+}
+
+footer  .menu-second__item{
+    transition: border-inline .3s ease-in;
+}
+
+.menu-second .menu-second__item:hover{
+    border-inline: 2px solid #ffff;
 }
 
 footer .menu-second{
@@ -349,7 +768,7 @@ footer .menu-second{
    }
    100%{
     width: 41.7rem;
-    height: 62.5rem;
+    height: 48rem;
     opacity: 1;
     } 
 }
@@ -366,7 +785,7 @@ footer .menu-second{
     }
     100%{
      width: 41.7rem;
-     height: 42rem;
+     height: 29rem;
      opacity: 1;
      } 
  }

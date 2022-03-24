@@ -36,32 +36,49 @@
     </header>
     <!--fin del header-->
     <!--comienzo del main-->
-    <main>
-        <section> 
+    <main class="main__contact conteiner">
+        <section id="from" class="flex-row"> 
             <div>
-                <form action=""method="POST">
+                <form action=""method="POST" class="from">
                     <ul>
-                        <li id="name"><input type="text" name="username" id="username" placeholder="Nombre completo" required="true"></li>
-                        <li id="empresa"><input type="text" name="empresa" id="empresa" placeholder="Nombre de la empresa" required="true"></li>
-                        <li id="email"><input type="email" name="email" id="email" placeholder="Email" required="true"></li>
-                        <li id="tel"><input type="number" name="telefono" id="telefono" placeholder="Telefono" required="true"></li>
-                        <li id="selec"><h4>Selecciona un servicio</h4></li>
-                        <li id="op1"><label for="seleccionunica">Servicio 1</label>
-                                  <input type="radio" name="seleccionunica" id="seleccionunica" required="true"></li>
-                        <li id="op2"><label for="seleccionunica">Servicio 2</label>
-                                  <input type="radio" name="seleccionunica" id="seleccionunica" required="true"></li>
-                        <li id="op3"><label for="seleccionunica">Servicio 3</label>
-                                  <input type="radio" name="seleccionunica" id="seleccionunica" required="true"></li>
-                        <li id="menu"> <label for="empresauno">Negocio</label>
-                                   <select class="menu1" name="empresauno" id="empresauno" required="true">
-                                       <option value="Emprendimiento">Emprendimiento</option>
-                                       <option value="Pime">Pime</option>
-                                   </select></li>
-                        <li id="quiero"><label for="acepta">Quiero resivir informacios de nuevos servicios y ofertas</label>
-                                 <input class="op4" type="checkbox" name="acepta" id="acepta"></li>
-                        <li id="text"><textarea name="aclaraciones" id="aclaraciones" cols="65" rows="14">Dejanos un mensaje</textarea></li>
-                        <li id="env"><button type="submit">Enviar</button></li>
-                        <li id="reset"><button type="reset">Resetear formulario</button></li>
+                        <div class="name flex-row">
+                              <li id="name"><input type="text" name="username" id="username" placeholder="Nombre completo" required="true"></li>
+                              <li id="empresa"><input type="text" name="empresa" id="empresa" placeholder="Nombre de la empresa" required="true"></li>
+                        </div>
+                        <div class="email flex-row">
+                            <li id="email"><input type="email" name="email" id="email" placeholder="Email" required="true"></li>
+                            <li id="tel"><input type="number" name="telefono" id="telefono" placeholder="Telefono" required="true"></li>
+                        </div>
+                        <div class="selec flex-row">
+                            <li id="selec"><h4>Selecciona un servicio</h4></li>
+                        </div>
+                        <div class="serv flex-row">
+                            <li id="op1"><label for="seleccionunica">Servicio 1</label>
+                                    <input type="radio" name="seleccionunica" id="seleccionunica" required="true"></li>
+                            <li id="op2"><label for="seleccionunica">Servicio 2</label>
+                                    <input type="radio" name="seleccionunica" id="seleccionunica" required="true"></li>
+                            <li id="op3"><label for="seleccionunica">Servicio 3</label>
+                                    <input type="radio" name="seleccionunica" id="seleccionunica" required="true"></li>
+                        </div>
+                        <div class="neg flex-row">
+                            <li id="menu"> <label for="empresauno">Negocio</label>
+                                <select class="menu1" name="empresauno" id="empresauno" required="true">
+                                    <option value="Emprendimiento">Emprendimiento</option>
+                                    <option value="Pime">Pime</option>
+                                </select></li>  
+                        </div>
+                        <div class="point flex-row">
+                            <li id="quiero"><label for="acepta">Quiero resivir informacios de nuevos servicios y ofertas</label>
+                                <input class="op4" type="checkbox" name="acepta" id="acepta"></li>
+                        </div>
+                        <div class="text flex-row">
+                            <li id="text">
+                                <textarea name="aclaraciones" id="aclaraciones" cols="65" rows="14">Dejanos un mensaje</textarea></li>
+                        </div>
+                        <div class="boton flex-row">
+                            <li id="env"><button type="submit">Enviar</button></li>
+                            <li id="reset"><button type="reset">Resetear formulario</button></li>
+                        </div>
                     </ul>
                 </form>
             </div>
