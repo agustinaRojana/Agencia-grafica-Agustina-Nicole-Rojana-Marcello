@@ -374,27 +374,45 @@ header .menu__item {
 #sims{
     width: 72.5vh;
     height: 51.3vh;
+    transition: all  3s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+#sims:hover{
+    width: 100vh;
+    height: 75vh;
 }
 
 .galeria__uno #libro{
     width: 18.2vh;
     height: 12.3vh;
+    transition: all  3s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
 .galeria__uno #libro1{
     width: 18.2vh;
     height: 12.3vh;
+    transition: all  3s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
 .galeria__uno #libro2{
     width: 18.2vh;
     height: 12.3vh;
+    transition: all  3s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
 
 .galeria__uno #libro3{
     width: 18.2vh;
     height: 12.3vh;
+    transition: all  3s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.galeria__uno #libro:hover,
+.galeria__uno #libro1:hover,
+.galeria__uno #libro2:hover,
+.galeria__uno #libro3:hover{
+    width: 60vh;
+    height: 35vh;
 }
 
 @media(max-width: 480px) {
@@ -519,6 +537,7 @@ header .menu__item {
     font-weight: 700;
     font-size: 36px;
     line-height: 42px;
+    transition: color .6s ease-out;
 } 
 
 .neg #menu label{   
@@ -527,6 +546,12 @@ header .menu__item {
     font-size: 36px;
     line-height: 42px;
     color: #FF33FF;
+    transition: color .6s ease-out;
+}
+
+#selec h4:hover, 
+.neg #menu label:hover{
+    color: #00D0AB;
 }
 
 .neg{
@@ -677,6 +702,13 @@ header .menu__item {
     line-height: 4rem;
     color: #FF33FF;
     padding-left: 17rem;
+    transition: color .6s ease-out;
+}
+
+.servicio__one article h3:hover, 
+.servicio__two article h3:hover, 
+.servicio__three article h3:hover{
+    color: #00D0AB;
 }
 
 .service__h2{
@@ -686,6 +718,11 @@ header .menu__item {
     font-size: 4em;
     line-height: 4rem;
     color: #00D0AB;
+    transition: color .6s ease-out;
+}
+
+.service__h2:hover{
+    color: #FF33FF;
 }
 
 @media(max-width: 480px){
@@ -753,39 +790,3 @@ footer .menu-second{
     padding: 1rem;
 }
 /*footer fin */
-
-/*Animaciones*/
-@keyframes bloque-rosa{
-    
-   0%{opacity: 0;
-    width: 41.7rem;
-    height: 0px;
-    }
-
-  50%{
-    width: 41.7rem;
-    opacity: 1;
-   }
-   100%{
-    width: 41.7rem;
-    height: 48rem;
-    opacity: 1;
-    } 
-}
-@keyframes bloque-rosa-two{
-    
-    0%{opacity: 0;
-     width: 41.7rem;
-     height: 0px;
-     }
- 
-   50%{
-     width: 41.7rem;
-     opacity: 1;
-    }
-    100%{
-     width: 41.7rem;
-     height: 29rem;
-     opacity: 1;
-     } 
- }
