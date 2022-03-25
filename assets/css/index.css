@@ -28,7 +28,7 @@ li{
     list-style-type: none;
 }
 
-body{
+.body{
     background: rgb(0,208,171);
     background: linear-gradient(332deg, rgba(0,208,171,1) 6%, rgba(255,51,255,1) 100%);   
 }
@@ -65,10 +65,10 @@ body{
 /*header inc*/
 header{
     grid-area: header;
-    background-color: black;
+    background-color:#000000 ;
 }
 
-header .navbar{
+header .navbar1{
     min-height: 20vh;
     justify-content: space-between;
     align-items: center;
@@ -790,3 +790,10 @@ footer .menu-second{
     padding: 1rem;
 }
 /*footer fin */
+
+/*elementos bootstrap inc*/
+#color1{
+    background-color: aliceblue;
+}
+
+/*elementos bootstrap fin*/
