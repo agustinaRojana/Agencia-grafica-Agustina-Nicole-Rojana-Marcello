@@ -19,7 +19,7 @@ a{
     font-style: normal;
     font-weight: 400;
     font-size: 1.8em;
-    line-height: 21px;
+    line-height: 2.1rem;
     text-decoration: none;
     display: inline-block;
 }
@@ -105,7 +105,6 @@ header .menu__item {
 .menu .menu__item .menu__link{
     padding: 1rem;
 }
-
 /*header fin*/
 
 /*main index inc*/
@@ -126,8 +125,8 @@ header .menu__item {
     display: grid;
     grid-template-columns:3fr 2fr;
     grid-template-rows: 1fr;
-    grid-gap: 20px;
-    padding: 20px;
+    grid-gap: 2rem;
+    padding: 2rem;
     grid-template-areas: 
     "secOne secTwo";
     min-height:50vh;
@@ -212,8 +211,8 @@ header .menu__item {
     }
     
     .img__hijo:hover{
-       width: 45vh;
-       height: 60vh;
+       width: 60vh;
+       height: 80vh;
     }
     
     #secTwo{
@@ -248,8 +247,8 @@ header .menu__item {
     display: grid;
     grid-template-columns: auto auto;
     grid-template-rows: 1fr;
-    grid-gap: 20px;
-    padding: 20px;
+    grid-gap: 2rem;
+    padding: 2rem;
     grid-template-areas: 
     "about list";
     min-height:110vh;
@@ -358,8 +357,8 @@ header .menu__item {
     display: grid;
     grid-template-columns: auto ;
     grid-template-rows: 80vh 30vh;
-    grid-gap: 0px;
-    padding: 0px;
+    grid-gap: 0rem;
+    padding: 0rem;
     grid-template-areas: 
     "sims"
     "img ";
@@ -430,8 +429,8 @@ header .menu__item {
         display: grid;
         grid-template-columns: auto;
         grid-template-rows: 40vh 1fr ;
-        grid-gap: 0px;
-        padding: 0px;
+        grid-gap: 0rem;
+        padding: 0rem;
         grid-template-areas: 
         "sims"
         "img ";
@@ -453,27 +452,45 @@ header .menu__item {
     #sims{
         width: 32.6vh;
         height: 23.1vh;
+        transition: all  3s cubic-bezier(0.075, 0.82, 0.165, 1);
+    }
+
+    #sims:hover{
+        width: 50vh;
+        height: 35vh;
     }
     
     .galeria__uno #libro{
         width: 32.6vh;
         height: 23.1vh;
+        transition: all  3s cubic-bezier(0.075, 0.82, 0.165, 1)
     }
     
     .galeria__uno #libro1{
         width: 32.6vh;
         height: 23.1vh;
+        transition: all  3s cubic-bezier(0.075, 0.82, 0.165, 1)
     }
     
     .galeria__uno #libro2{
         width: 32.6vh;
         height: 23.1vh;
+        transition: all  3s cubic-bezier(0.075, 0.82, 0.165, 1)
     }
     
     
     .galeria__uno #libro3{
         width: 32.6vh;
         height: 23.1vh;
+        transition: all  3s cubic-bezier(0.075, 0.82, 0.165, 1)
+    }
+
+    .galeria__uno #libro:hover,
+    .galeria__uno #libro1:hover,
+    .galeria__uno #libro2:hover,
+    .galeria__uno #libro3:hover{
+        width: 50vh;
+        height: 35vh;
     }
 }
 /*main gallery fin*/
@@ -484,8 +501,8 @@ header .menu__item {
     display: grid;
     grid-template-columns: auto ;
     grid-template-rows: auto auto auto auto auto auto 1fr auto;
-    grid-gap: 0px;
-    padding: 0px;
+    grid-gap: 0rem;
+    padding: 0rem;
     grid-template-areas: 
     "nombre  "
     "email   "
@@ -532,7 +549,7 @@ header .menu__item {
     padding: 2rem;
     font-weight: 400;
     font-size: 1.8em;
-    line-height: 21px;
+    line-height: 2.1rem;
 
 }
 
@@ -545,7 +562,7 @@ header .menu__item {
     font-style: normal;
     font-weight: 700;
     font-size: var(--firstfountsize);
-    line-height: 42px;
+    line-height: 4.2rem;
     transition: color .6s ease-out;
 } 
 
@@ -553,7 +570,7 @@ header .menu__item {
     font-style: normal;
     font-weight: 700;
     font-size: var(--firstfountsize);
-    line-height: 42px;
+    line-height: 4.2rem;
     color: var(--firstcolor);
     transition: color .6s ease-out;
 }
@@ -566,7 +583,7 @@ header .menu__item {
 .neg{
     grid-area: neg;
     padding: 2rem;
-    line-height: 28px;
+    line-height: 2.8rem;
 }
 
 .point{
@@ -574,7 +591,7 @@ header .menu__item {
     padding: 2rem;
     font-weight: 400;
     font-size: 2.4em;
-    line-height: 28px;
+    line-height: 2.8rem;
 }
 
 .text{
@@ -593,8 +610,8 @@ header .menu__item {
         display: grid;
         grid-template-columns: auto ;
         grid-template-rows: auto auto auto auto auto auto 1fr auto;
-        grid-gap: 0px;
-        padding: 0px;
+        grid-gap: 0rem;
+        padding: 0rem;
         grid-template-areas: 
         "nombre  "
         "email   "
@@ -611,9 +628,9 @@ header .menu__item {
         grid-area: nombre;
         flex-direction: column;
         justify-content: space-between;
-        padding: 6rem;
-       
+        padding: 6rem;   
     }
+
     .email{
         grid-area: email;
         flex-direction: column;
@@ -654,7 +671,6 @@ header .menu__item {
 /*main contact fin*/
 
 /*main service fin*/
-
 .main__service{
     grid-area: main;
     display: grid;
@@ -677,7 +693,6 @@ header .menu__item {
 
 .sevicio__one{
     grid-area: ser__1;
-    
 }
 
 
@@ -697,8 +712,7 @@ header .menu__item {
     font-size: var(--secondfoutnsize);
     line-height: 1.4rem;
     color: var(--fourthcolor);
-    padding-left: 20rem;
-    
+    padding-left: 20rem;   
 }
 
 .servicio__one article h3, 
@@ -736,11 +750,9 @@ header .menu__item {
 
 @media(max-width: 480px){
 
-    .main__service{
-        
+    .main__service{ 
         grid-gap: 20rem;
-        padding: 10px;
-            
+        padding: 1rem;       
     }
 
     .servicio__one article p, 
@@ -763,18 +775,17 @@ header .menu__item {
         font-size: 2em;
         line-height: 4rem;
         color: var(--firstcolor);
-        padding-left: 3rem;
-        
+        padding-left: 3rem;    
     }
 }
 /*main contact fin*/
-
 
 /*footerx inc*/
 footer{
     grid-area: footer;
     background-color: var(--fourthcolor);
 }
+
 footer .nav{
     align-items: center;
     padding: 0 2rem;
@@ -787,7 +798,7 @@ footer  .menu-second__item{
 }
 
 .menu-second .menu-second__item:hover{
-    border-inline: 2px solid var(--thirdcolor);
+    border-inline: 0.2rem solid var(--thirdcolor);
 }
 
 footer .menu-second{
