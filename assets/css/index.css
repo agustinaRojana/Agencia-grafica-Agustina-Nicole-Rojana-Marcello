@@ -33,6 +33,15 @@ body{
     background: linear-gradient(332deg, rgba(0,208,171,1) 6%, rgba(255,51,255,1) 100%);   
 }
 
+:root{
+    --firstcolor:#FF33FF;
+    --secondcolor:#00D0AB;
+    --thirdcolor:#ffff;
+    --fourthcolor:black;
+    --firstfountsize: 3.6em;
+    --secondfoutnsize: 1.2em;
+}
+
 .body{
     display: grid;
     grid-template-columns:auto;
@@ -65,7 +74,7 @@ body{
 /*header inc*/
 header{
     grid-area: header;
-    background-color: black;
+    background-color: var(--fourthcolor);
 }
 
 header .navbar{
@@ -90,7 +99,7 @@ header .menu__item {
 }
 
 .menu .menu__item:hover{
-    border-inline: 2px solid #ffff;
+    border-inline: 2px solid var(--thirdcolor);
 }
 
 .menu .menu__item .menu__link{
@@ -151,25 +160,25 @@ header .menu__item {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-style: normal;
     font-weight: 700;
-    font-size: 3.6em;
+    font-size: var(--firstfountsize);
     line-height: 4.2rem;
-    color: #00D0AB;
+    color: var(--secondcolor);
     transition: color .6s ease-out;
 }
 .texto__hijone:hover{
-    color:#FF33FF
+    color:var(--firstcolor);
 }
 
 .texto__hijotwo{
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-style: normal;
     font-weight: 400;
-    font-size: 1.2em;
+    font-size: var(--secondfoutnsize);
     line-height: 1.4rem;
-    color: #000000;
+    color: var(--fourthcolor);
     width: 50%;
 }
-@media (max-width: 480px){
+@media(max-width: 480px){
     .body__index{
         display: grid;
         grid-template-columns:auto;
@@ -211,11 +220,11 @@ header .menu__item {
         align-items: center;
     }
     .texto__hijone{
-       color: #FF33FF;
+       color: var(--firstcolor);
        transition: color .6s ease-out;
     }
     .texto__hijone:hover{
-        color: #00D0AB;
+        color: var(--secondcolor);
     }
     .texto__hijotwo{
         width: 40rem;
@@ -263,23 +272,23 @@ header .menu__item {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-style: normal;
     font-weight: 700;
-    font-size: 3.6em;
+    font-size: var(--firstfountsize);
     line-height: 4.2rem;
-    color: #00D0AB;
+    color: var(--secondcolor);
     transition: color .6s ease-out;
 }
 
 .historia:hover{
-    color: #FF33FF;
+    color: var(--firstcolor);
 }
 
 .historia__resumen{
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-style: normal;
     font-weight: 400;
-    font-size: 1.2em;
+    font-size: var(--secondfoutnsize);
     line-height: 1.4rem;
-    color: #000000;
+    color: var(--fourthcolor);
     width: 41.7rem;
 }
 
@@ -289,12 +298,12 @@ header .menu__item {
     font-weight: 700;
     font-size: 3em;
     line-height: 4rem;
-    color: #FF33FF;
+    color: var(--firstcolor);
     transition: color .6s ease-out;
 }
 
 .caracteristicas:hover{
-    color: #00D0AB;
+    color: var(--secondcolor);
 }
 
 .lista__item{
@@ -303,7 +312,7 @@ header .menu__item {
     font-weight: 400;
     font-size: 2.4em;
     line-height: 8rem;
-    color: #000000;
+    color: var(--fourthcolor);
 }
 @media(max-width: 480px){
     .body{
@@ -522,7 +531,7 @@ header .menu__item {
     justify-content: space-between;
     padding: 2rem;
     font-weight: 400;
-    font-size: 18px;
+    font-size: 1.8em;
     line-height: 21px;
 
 }
@@ -532,10 +541,10 @@ header .menu__item {
 }
 
 #selec h4{
-    color: #FF33FF;
+    color: var(--firstcolor);
     font-style: normal;
     font-weight: 700;
-    font-size: 36px;
+    font-size: var(--firstfountsize);
     line-height: 42px;
     transition: color .6s ease-out;
 } 
@@ -543,15 +552,15 @@ header .menu__item {
 .neg #menu label{   
     font-style: normal;
     font-weight: 700;
-    font-size: 36px;
+    font-size: var(--firstfountsize);
     line-height: 42px;
-    color: #FF33FF;
+    color: var(--firstcolor);
     transition: color .6s ease-out;
 }
 
 #selec h4:hover, 
 .neg #menu label:hover{
-    color: #00D0AB;
+    color: var(--secondcolor);
 }
 
 .neg{
@@ -564,7 +573,7 @@ header .menu__item {
     grid-area: point;
     padding: 2rem;
     font-weight: 400;
-    font-size: 24px;
+    font-size: 2.4em;
     line-height: 28px;
 }
 
@@ -644,7 +653,7 @@ header .menu__item {
 }
 /*main contact fin*/
 
-/*main contact fin*/
+/*main service fin*/
 
 .main__service{
     grid-area: main;
@@ -685,9 +694,9 @@ header .menu__item {
 .servicio__three article p{
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-style: normal;
-    font-size: 1.2em;
+    font-size: var(--secondfoutnsize);
     line-height: 1.4rem;
-    color: #000000;
+    color: var(--fourthcolor);
     padding-left: 20rem;
     
 }
@@ -700,7 +709,7 @@ header .menu__item {
     font-weight: 700;
     font-size: 2em;
     line-height: 4rem;
-    color: #FF33FF;
+    color: var(--firstcolor);
     padding-left: 17rem;
     transition: color .6s ease-out;
 }
@@ -708,7 +717,7 @@ header .menu__item {
 .servicio__one article h3:hover, 
 .servicio__two article h3:hover, 
 .servicio__three article h3:hover{
-    color: #00D0AB;
+    color: var(--secondcolor);
 }
 
 .service__h2{
@@ -717,12 +726,12 @@ header .menu__item {
     font-weight: 700;
     font-size: 4em;
     line-height: 4rem;
-    color: #00D0AB;
+    color: var(--secondcolor);
     transition: color .6s ease-out;
 }
 
 .service__h2:hover{
-    color: #FF33FF;
+    color: var(--firstcolor);
 }
 
 @media(max-width: 480px){
@@ -739,9 +748,9 @@ header .menu__item {
     .servicio__three article p{
         font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
         font-style: normal;
-        font-size: 1.2em;
+        font-size: var(--secondfoutnsize);
         line-height: 1.4rem;
-        color: #000000;
+        color: var(--fourthcolor);
         padding-left: 3rem;
     }
 
@@ -753,7 +762,7 @@ header .menu__item {
         font-weight: 700;
         font-size: 2em;
         line-height: 4rem;
-        color: #FF33FF;
+        color: var(--firstcolor);
         padding-left: 3rem;
         
     }
@@ -764,7 +773,7 @@ header .menu__item {
 /*footerx inc*/
 footer{
     grid-area: footer;
-    background-color: black;
+    background-color: var(--fourthcolor);
 }
 footer .nav{
     align-items: center;
@@ -778,7 +787,7 @@ footer  .menu-second__item{
 }
 
 .menu-second .menu-second__item:hover{
-    border-inline: 2px solid #ffff;
+    border-inline: 2px solid var(--thirdcolor);
 }
 
 footer .menu-second{
