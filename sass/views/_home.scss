@@ -1,0 +1,133 @@
+/*main index inc*/
+.body__index{
+    display: grid;
+    grid-template-columns:auto;
+    grid-template-rows: 15vh 1fr 15vh;
+    grid-template-areas: 
+    "header"
+    "main "
+    "footer";
+    margin: 0;
+    min-height:120vh;
+}
+
+#medio{
+    grid-area: main;
+    display: grid;
+    grid-template-columns:3fr 2fr;
+    grid-template-rows: 1fr;
+    grid-gap: 2rem;
+    padding: 2rem;
+    grid-template-areas: 
+    "secOne secTwo";
+    min-height:50vh;
+}
+
+#secOne{
+    grid-area: secOne;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+
+}
+.img__hijo{
+    transition: all  3s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.img__hijo:hover{
+   width: 50vh;
+   height: 65vh;
+}
+
+#secTwo{
+    grid-area: secTwo;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.texto__hijone{
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: var(--firstfountsize);
+    line-height: 4.2rem;
+    color: var(--secondcolor);
+    transition: color .6s ease-out;
+}
+.texto__hijone:hover{
+    color:var(--firstcolor);
+}
+
+.texto__hijotwo{
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: var(--secondfoutnsize);
+    line-height: 1.4rem;
+    color: var(--fourthcolor);
+    width: 50%;
+}
+@media(max-width: 480px){
+    .body__index{
+        display: grid;
+        grid-template-columns:auto;
+        grid-template-rows: 20vh  1fr auto;
+        grid-template-areas: 
+        "header"
+        "main "
+        "footer";
+        margin: 0;
+        min-height:198vh;
+    }
+    #medio{
+        display: grid;
+        grid-template-columns:auto;
+        grid-template-rows: auto 40vh;
+        grid-gap: 1rem;
+        padding: 1rem;
+        grid-template-areas: 
+        "secOne" 
+        "secTwo";
+        
+    }
+    #secOne{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .img__hijo{
+        transition: all  3s cubic-bezier(0.075, 0.82, 0.165, 1);
+    }
+    
+    .img__hijo:hover{
+       width: 60vh;
+       height: 80vh;
+    }
+    
+    #secTwo{
+        align-items: center;
+    }
+    .texto__hijone{
+       color: var(--firstcolor);
+       transition: color .6s ease-out;
+    }
+    .texto__hijone:hover{
+        color: var(--secondcolor);
+    }
+    .texto__hijotwo{
+        width: 40rem;
+    }
+
+    .navbar{
+       flex-direction: column;}
+    
+    .menu__link{
+        font-size: 1.5em;
+    }
+    .menu-second__link{
+        font-size: 1.5em;
+    }
+}
+/*main index fin*/
