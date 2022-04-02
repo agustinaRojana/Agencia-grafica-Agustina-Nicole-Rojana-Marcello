@@ -1,5 +1,13 @@
+/*MISC*/
 @import "./misc/normalize";
 @import "./misc/variables";
 @import "./misc/helpers";
+
+/*HEADER*/
 @import "./partials/header";
+
+/*MAIN INDEX*/
+@import "./views/home";
+
+/*FOOTER*/
 @import "./partials/footer"
