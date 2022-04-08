@@ -1,0 +1,171 @@
+.centro{
+    grid-area: main;
+    display: grid;
+    grid-template-columns: auto ;
+    grid-template-rows: 80vh 30vh;
+    grid-gap: 0rem;
+    padding: 0rem;
+    grid-template-areas: 
+    "sims"
+    "img ";
+    min-height:120vh;
+
+    .galeria{
+        grid-area: img;
+        justify-content: center;
+        align-items: start;
+
+        .galeria__uno{
+            #libro{
+                width: 18.2vh;
+                height: 12.3vh;
+                transition: all  3s cubic-bezier(0.075, 0.82, 0.165, 1);
+
+                &:hover{
+                    width: 60vh;
+                    height: 35vh;
+                }
+            }
+
+            #libro1{
+                width: 18.2vh;
+                height: 12.3vh;
+                transition: all  3s cubic-bezier(0.075, 0.82, 0.165, 1);
+
+                &:hover{
+                    width: 60vh;
+                    height: 35vh;
+                }
+            }
+
+            #libro2{
+                width: 18.2vh;
+                height: 12.3vh;
+                transition: all  3s cubic-bezier(0.075, 0.82, 0.165, 1);
+
+                &:hover{
+                    width: 60vh;
+                    height: 35vh;
+                }
+            }
+
+            #libro3{
+                width: 18.2vh;
+                height: 12.3vh;
+                transition: all  3s cubic-bezier(0.075, 0.82, 0.165, 1);
+
+                &:hover{
+                    width: 60vh;
+                    height: 35vh;
+                }
+            }
+
+
+
+        }
+
+        
+    }
+
+    .sims__padre{
+        grid-area: sims;
+        justify-content: center;
+        align-items: end;
+
+        #sims{
+            width: 72.5vh;
+            height: 51.3vh;
+            transition: all  3s cubic-bezier(0.075, 0.82, 0.165, 1);
+
+            &:hover{
+                width: 100vh;
+                height: 75vh;
+            }
+        }
+    }
+    
+}
+
+
+@media(max-width: 480px) {
+    .centro{
+        grid-area: main;
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: 40vh 1fr ;
+        grid-gap: 0rem;
+        padding: 0rem;
+        grid-template-areas: 
+        "sims"
+        "img ";
+
+        .sims__padre{
+            grid-area: sims;
+            justify-content: center;
+            align-items: end;
+
+            #sims{
+                width: 32.6vh;
+                height: 23.1vh;
+                transition: all  3s cubic-bezier(0.075, 0.82, 0.165, 1);
+
+                &:hover{
+                    width: 50vh;
+                    height: 35vh;
+                }
+            }
+        }
+
+        .galeria__uno{
+            grid-area: img;  
+            display: flex;
+            flex-direction: column;
+
+            #libro{
+                width: 32.6vh;
+                height: 23.1vh;
+                transition: all  3s cubic-bezier(0.075, 0.82, 0.165, 1);
+
+                &:hover{
+                    width: 50vh;
+                    height: 35vh;
+                }
+            }
+
+            #libro1{
+                width: 32.6vh;
+                height: 23.1vh;
+                transition: all  3s cubic-bezier(0.075, 0.82, 0.165, 1);
+                
+                &:hover{
+                    width: 50vh;
+                    height: 35vh;
+                }
+            }
+
+            #libro2{
+                width: 32.6vh;
+                height: 23.1vh;
+                transition: all  3s cubic-bezier(0.075, 0.82, 0.165, 1);
+               
+                &:hover{
+                    width: 50vh;
+                    height: 35vh;
+                }
+            }
+
+            #libro3{
+                width: 32.6vh;
+                height: 23.1vh;
+                transition: all  3s cubic-bezier(0.075, 0.82, 0.165, 1);
+
+                &:hover{
+                    width: 50vh;
+                    height: 35vh;
+                }
+            }
+              
+        }
+    }
+
+}
