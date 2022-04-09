@@ -40,10 +40,6 @@ html {
     margin: 0;
     min-height: 198vh; } }
 
-.flex-colum {
-  display: flex;
-  flex-direction: column; }
-
 .conteiner, header .navbar, .body__index .medio, .midel, footer .nav {
   max-width: 1080px;
   margin: 0 auto; }
@@ -395,14 +391,14 @@ header {
       grid-area: selec;
       display: flex;
       direction: row; }
-      .main__contact #from > * .selec #selec h4 {
+      .main__contact #from > * .selec #selec h2 {
         color: #FF33FF;
         font-style: normal;
         font-weight: 700;
         font-size: 3.6em;
         line-height: 4.2rem;
         transition: color .6s ease-out; }
-        .main__contact #from > * .selec #selec h4:hover {
+        .main__contact #from > * .selec #selec h2:hover {
           color: #00D0AB; }
     .main__contact #from > * .serv {
       grid-area: serv;
