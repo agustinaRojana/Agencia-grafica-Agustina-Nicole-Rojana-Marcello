@@ -19,14 +19,24 @@
 
     #from > *{
         padding: 4rem;
+        @include flex (flex, row);
         font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
         font-style: normal;
 
+        @each $com,$value in $complet {
+
+            .complet--#{$com}{
+
+                justify-content: space-between;
+                padding: 2rem;
+            }
+
+        }
+
         .name{
             grid-area: nombre;
+            @include flex (flex, row);
             flex-direction: row;
-            justify-content: space-between;
-            padding: 2rem;
         
             #username{
                 width: 20.8rem;
@@ -35,39 +45,35 @@
             }
         
             #empresa{
-                width: 20.8rem;
-                height: 4.2rem;
-                border: none;  
+                @extend #username;  
             }
         }
         
         .email{
             grid-area: email;
-            justify-content: space-between;
-            padding: 2rem;
+            @include flex (flex, row);
 
             #email{
                 width: 20.8rem;
                 height: 4.2rem;
-                border: none;  
+                border: none; 
             }
 
             #telefono{
-                width: 20.8rem;
-                height: 4.2rem;
-                border: none;  
+                @extend #email;  
             }
         }
 
         .selec{
             grid-area: selec;
+            @include flex (flex, row);
 
             #selec{ 
                 h4{
                     color: $firstcolor;
                     font-style: normal;
                     font-weight: 700;
-                    font-size: $firstfountsize;
+                    font-size: map-get($fountsize,first );
                     line-height: 4.2rem;
                     transition: color .6s ease-out;
 
@@ -82,16 +88,18 @@
         
         .serv {
             grid-area: serv;
+            @include flex (flex, row);
             justify-content: space-between;
             padding: 2rem;
             font-weight: 400;
-            font-size: 1.8em;
+            font-size: map-get($fountsize, fourth);
             line-height: 2.1rem;
 
         }
 
         .neg{
             grid-area: neg;
+            @include flex (flex, row);
             padding: 2rem;
             line-height: 2.8rem;
 
@@ -100,7 +108,7 @@
                 label{   
                     font-style: normal;
                     font-weight: 700;
-                    font-size: $firstfountsize;
+                    font-size: map-get($fountsize, first);
                     line-height: 4.2rem;
                     color: $firstcolor;
                     transition: color .6s ease-out;
@@ -114,20 +122,32 @@
 
         .point{
             grid-area: point;
+            @include flex (flex, row);
             padding: 2rem;
             font-weight: 400;
-            font-size: 2.4em;
+            font-size:map-get($fountsize, third);
             line-height: 2.8rem;
         }
         
         .text{
             grid-area: text;
+            @include flex (flex, row);
             padding: 2rem;
         }
         
         .boton{
             grid-area: boton;
+            @include flex (flex, row);
             padding: 2rem;
+
+            @each $boton, $color in $botons {
+                .btn--#{$boton} {
+                    background-color: $color;
+                    height: 3rem;
+                    width: 13rem;
+                }
+                
+            }
         }
 
     }

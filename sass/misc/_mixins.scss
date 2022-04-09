@@ -1,5 +1,6 @@
-.flex-row{
-    display: flex;
+@mixin flex($display: flex, $direction: row) {
+    display: $display;
+    direction: $direction;
 }
 
 .flex-colum{

@@ -6,11 +6,15 @@ footer{
         padding: 0 2rem;
         min-height: 15vh;
         justify-content: space-between;
+        @extend .conteiner;
+        @include flex (flex, row);
+
     }
 
     .menu-second{
         flex-basis: 40%;
         justify-content: space-between;
+        @include flex (flex, row);
         &__item{
             transition: border-inline .3s ease-in;
             &:hover{

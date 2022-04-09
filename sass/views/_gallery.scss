@@ -12,55 +12,25 @@
 
     .galeria{
         grid-area: img;
+        @include flex (flex, row);;
         justify-content: center;
         align-items: start;
 
         .galeria__uno{
-            #libro{
-                width: 18.2vh;
-                height: 12.3vh;
-                transition: all  3s cubic-bezier(0.075, 0.82, 0.165, 1);
 
-                &:hover{
-                    width: 60vh;
-                    height: 35vh;
+            @each $image, $value in $pictures {
+               .img--#{$image} {
+                    width: 18.2vh;
+                    height: 12.3vh;
+                    transition: all  3s cubic-bezier(0.075, 0.82, 0.165, 1);
+
+                    &:hover{
+                        width: 60vh;
+                        height: 35vh;
+                    }
                 }
+                
             }
-
-            #libro1{
-                width: 18.2vh;
-                height: 12.3vh;
-                transition: all  3s cubic-bezier(0.075, 0.82, 0.165, 1);
-
-                &:hover{
-                    width: 60vh;
-                    height: 35vh;
-                }
-            }
-
-            #libro2{
-                width: 18.2vh;
-                height: 12.3vh;
-                transition: all  3s cubic-bezier(0.075, 0.82, 0.165, 1);
-
-                &:hover{
-                    width: 60vh;
-                    height: 35vh;
-                }
-            }
-
-            #libro3{
-                width: 18.2vh;
-                height: 12.3vh;
-                transition: all  3s cubic-bezier(0.075, 0.82, 0.165, 1);
-
-                &:hover{
-                    width: 60vh;
-                    height: 35vh;
-                }
-            }
-
-
 
         }
 
@@ -69,6 +39,7 @@
 
     .sims__padre{
         grid-area: sims;
+        @include flex (flex, row);
         justify-content: center;
         align-items: end;
 

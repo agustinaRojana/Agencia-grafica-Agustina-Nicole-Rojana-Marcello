@@ -1,811 +1,664 @@
-/*normalize*/
+/*MISC*/
 *,
 *::after,
-*::before{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
 
-
-html{
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 62.5%;
-}
-
-a{
-    color: #FFFFFF;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 1.8em;
-    line-height: 2.1rem;
-    text-decoration: none;
-    display: inline-block;
-}
-
-li{
-    list-style-type: none;
-}
-
-body{
-    background: rgb(0,208,171);
-    background: linear-gradient(332deg, rgba(0,208,171,1) 6%, rgba(255,51,255,1) 100%);   
-}
-
-:root{
-    --firstcolor:#FF33FF;
-    --secondcolor:#00D0AB;
-    --thirdcolor:#ffff;
-    --fourthcolor:black;
-    --firstfountsize: 3.6em;
-    --secondfoutnsize: 1.2em;
-}
-
-.body{
+html {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 62.5%; }
+  html body {
+    background: #00d0ab;
+    background: linear-gradient(332deg, #00d0ab 6%, #ff33ff 100%); }
+    html body li {
+      list-style-type: none; }
+    html body a {
+      color: #FFFFFF;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 1.8em;
+      line-height: 2.1rem;
+      text-decoration: none;
+      display: inline-block; }
+  html .body {
     display: grid;
-    grid-template-columns:auto;
+    grid-template-columns: auto;
     grid-template-rows: 15vh 1fr 15vh;
-    grid-template-areas: 
-    "header"
-    "main "
-    "footer";
+    grid-template-areas: "header" "main " "footer";
     margin: 0;
-    min-height:100vh;
-}
-/*normalize*/
+    min-height: 100vh; }
 
-/*helpers*/
-.flex-row{
-    display: flex;
-}
+@media (max-width: 480px) {
+  .body {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 20vh  1fr auto;
+    grid-template-areas: "header" "main " "footer";
+    margin: 0;
+    min-height: 198vh; } }
 
-.flex-colum{
-    display: flex;
-    flex-direction: column;
-}
+.flex-colum {
+  display: flex;
+  flex-direction: column; }
 
-.conteiner{
-    max-width: 1080px;
-    margin: 0 auto;
-}
-/*helpers*/
+.conteiner, header .navbar, .body__index .medio, .midel, footer .nav {
+  max-width: 1080px;
+  margin: 0 auto; }
 
-/*header inc*/
-header{
-    grid-area: header;
-    background-color: var(--fourthcolor);
-}
-
-header .navbar{
+/*HEADER*/
+header {
+  grid-area: header;
+  background-color: black; }
+  header .navbar {
     min-height: 20vh;
     justify-content: space-between;
     align-items: center;
     padding: 0 2rem;
-}
+    display: flex;
+    direction: row; }
+    header .navbar .logo {
+      flex-basis: 30%; }
+    header .navbar .menu {
+      flex-basis: 50%;
+      display: flex;
+      direction: row;
+      justify-content: space-between; }
+      header .navbar .menu__item {
+        transition: border-inline .3s ease-in; }
+        header .navbar .menu__item:hover {
+          border-inline: 2px solid #ffff; }
+      header .navbar .menu__link {
+        padding: 1rem; }
 
-header .logo{
-    flex-basis: 30%;
-}
+@media (max-width: 480px) {
+  .navbar {
+    flex-direction: column; }
+    .navbar .menu__link {
+      font-size: 1.5em; } }
 
-header .menu{
-    flex-basis: 50%;
-    justify-content: space-between;
-}
-
-header .menu__item {
-      /*border-inline: 2px solid #ffff;*/
-      transition: border-inline .3s ease-in;
-}
-
-.menu .menu__item:hover{
-    border-inline: 2px solid var(--thirdcolor);
-}
-
-.menu .menu__item .menu__link{
-    padding: 1rem;
-}
-/*header fin*/
-
-/*main index inc*/
-.body__index{
-    display: grid;
-    grid-template-columns:auto;
-    grid-template-rows: 15vh 1fr 15vh;
-    grid-template-areas: 
-    "header"
-    "main "
-    "footer";
-    margin: 0;
-    min-height:120vh;
-}
-
-#medio{
+/*MAIN INDEX*/
+.body__index {
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: 15vh 1fr 15vh;
+  grid-template-areas: "header" "main " "footer";
+  margin: 0;
+  min-height: 120vh; }
+  .body__index .medio {
     grid-area: main;
     display: grid;
-    grid-template-columns:3fr 2fr;
+    grid-template-columns: 3fr 2fr;
     grid-template-rows: 1fr;
     grid-gap: 2rem;
     padding: 2rem;
-    grid-template-areas: 
-    "secOne secTwo";
-    min-height:50vh;
-}
+    grid-template-areas: "secOne secTwo";
+    min-height: 50vh; }
+    .body__index .medio .sec__one {
+      grid-area: secOne;
+      display: flex;
+      direction: row;
+      justify-content: end;
+      align-items: center; }
+      .body__index .medio .sec__one .img__hijo {
+        transition: all 3s cubic-bezier(0.075, 0.82, 0.165, 1); }
+        .body__index .medio .sec__one .img__hijo:hover {
+          width: 50vh;
+          height: 65vh; }
+    .body__index .medio .sec__two {
+      grid-area: secTwo;
+      display: flex;
+      flex-direction: column;
+      justify-content: center; }
+      .body__index .medio .sec__two .texto__hijone {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 3.6em;
+        line-height: 4.2rem;
+        color: #00D0AB;
+        transition: color .6s ease-out; }
+        .body__index .medio .sec__two .texto__hijone:hover {
+          color: #FF33FF; }
+      .body__index .medio .sec__two .texto__hijotwo {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 1.2em;
+        line-height: 1.4rem;
+        color: black;
+        width: 50%; }
 
-#secOne{
-    grid-area: secOne;
-    display: flex;
-    justify-content: end;
-    align-items: center;
-
-}
-.img__hijo{
-    transition: all  3s cubic-bezier(0.075, 0.82, 0.165, 1);
-}
-
-.img__hijo:hover{
-   width: 50vh;
-   height: 65vh;
-}
-
-#secTwo{
-    grid-area: secTwo;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-.texto__hijone{
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-style: normal;
-    font-weight: 700;
-    font-size: var(--firstfountsize);
-    line-height: 4.2rem;
-    color: var(--secondcolor);
-    transition: color .6s ease-out;
-}
-.texto__hijone:hover{
-    color:var(--firstcolor);
-}
-
-.texto__hijotwo{
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-style: normal;
-    font-weight: 400;
-    font-size: var(--secondfoutnsize);
-    line-height: 1.4rem;
-    color: var(--fourthcolor);
-    width: 50%;
-}
-@media(max-width: 480px){
-    .body__index{
-        display: grid;
-        grid-template-columns:auto;
-        grid-template-rows: 20vh  1fr auto;
-        grid-template-areas: 
-        "header"
-        "main "
-        "footer";
-        margin: 0;
-        min-height:198vh;
-    }
-    #medio{
-        display: grid;
-        grid-template-columns:auto;
-        grid-template-rows: auto 40vh;
-        grid-gap: 1rem;
-        padding: 1rem;
-        grid-template-areas: 
-        "secOne" 
-        "secTwo";
-        
-    }
-    #secOne{
+@media (max-width: 480px) {
+  .body__index {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 20vh  1fr auto;
+    grid-template-areas: "header" "main " "footer";
+    margin: 0;
+    min-height: 198vh; }
+    .body__index .medio {
+      display: grid;
+      grid-template-columns: auto;
+      grid-template-rows: auto 40vh;
+      grid-gap: 1rem;
+      padding: 1rem;
+      grid-template-areas: "secOne"  "secTwo"; }
+      .body__index .medio .sec__one {
         display: flex;
         justify-content: center;
-        align-items: center;
-    }
+        align-items: center; }
+        .body__index .medio .sec__one .img__hijo {
+          transition: all 3s cubic-bezier(0.075, 0.82, 0.165, 1); }
+          .body__index .medio .sec__one .img__hijo:hover {
+            width: 60vh;
+            height: 80vh; }
+      .body__index .medio .sec__two {
+        align-items: center; }
+        .body__index .medio .sec__two .texto__hijone {
+          color: #FF33FF;
+          transition: color .6s ease-out; }
+          .body__index .medio .sec__two .texto__hijone:hover {
+            color: #00D0AB; }
+        .body__index .medio .sec__two .texto__hijotwo {
+          width: 40rem; } }
 
-    .img__hijo{
-        transition: all  3s cubic-bezier(0.075, 0.82, 0.165, 1);
-    }
-    
-    .img__hijo:hover{
-       width: 60vh;
-       height: 80vh;
-    }
-    
-    #secTwo{
-        align-items: center;
-    }
-    .texto__hijone{
-       color: var(--firstcolor);
-       transition: color .6s ease-out;
-    }
-    .texto__hijone:hover{
-        color: var(--secondcolor);
-    }
-    .texto__hijotwo{
-        width: 40rem;
-    }
+/*MAIN ABOUT*/
+.midel {
+  grid-area: main;
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-rows: 1fr;
+  grid-gap: 2rem;
+  padding: 2rem;
+  grid-template-areas: "about list";
+  min-height: 110vh; }
+  .midel .about {
+    grid-area: about;
+    display: flex;
+    direction: column;
+    justify-content: center;
+    align-items: center; }
+    .midel .about .historia {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      font-style: normal;
+      font-weight: 700;
+      font-size: 3.6em;
+      line-height: 4.2rem;
+      color: #00D0AB;
+      transition: color .6s ease-out; }
+      .midel .about .historia:hover {
+        color: #FF33FF; }
+    .midel .about .historia__resumen {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 1.2em;
+      line-height: 1.4rem;
+      color: black;
+      width: 41.7rem; }
+  .midel .list__padre {
+    grid-area: list;
+    display: flex;
+    direction: column;
+    align-items: center;
+    justify-content: space-around; }
+    .midel .list__padre .caracteristicas {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      font-style: normal;
+      font-weight: 700;
+      font-size: 3em;
+      line-height: 4rem;
+      color: #FF33FF;
+      transition: color .6s ease-out; }
+      .midel .list__padre .caracteristicas:hover {
+        color: #00D0AB; }
+    .midel .list__padre .lista__item {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 2.4em;
+      line-height: 8rem;
+      color: black; }
 
-    .navbar{
-       flex-direction: column;}
-    
-    .menu__link{
-        font-size: 1.5em;
-    }
-    .menu-second__link{
-        font-size: 1.5em;
-    }
-}
-/*main index fin*/
-
-/*main about inc*/
-.midel{
-    grid-area: main;
+@media (max-width: 480px) {
+  .midel {
     display: grid;
-    grid-template-columns: auto auto;
-    grid-template-rows: 1fr;
+    grid-template-columns: auto;
+    grid-template-rows: 50vh 80vh;
     grid-gap: 2rem;
     padding: 2rem;
-    grid-template-areas: 
-    "about list";
-    min-height:110vh;
-}
-
-.about{
-    grid-area: about;
-    justify-content: center;
-    align-items: center;
-}
-
-.list__padre{
-    grid-area: list;
-    align-items: flex-start;
-    justify-content: space-around;
-}
-
-
-.historia{
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-style: normal;
-    font-weight: 700;
-    font-size: var(--firstfountsize);
-    line-height: 4.2rem;
-    color: var(--secondcolor);
-    transition: color .6s ease-out;
-}
-
-.historia:hover{
-    color: var(--firstcolor);
-}
-
-.historia__resumen{
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-style: normal;
-    font-weight: 400;
-    font-size: var(--secondfoutnsize);
-    line-height: 1.4rem;
-    color: var(--fourthcolor);
-    width: 41.7rem;
-}
-
-.caracteristicas{
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-style: normal;
-    font-weight: 700;
-    font-size: 3em;
-    line-height: 4rem;
-    color: var(--firstcolor);
-    transition: color .6s ease-out;
-}
-
-.caracteristicas:hover{
-    color: var(--secondcolor);
-}
-
-.lista__item{
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 2.4em;
-    line-height: 8rem;
-    color: var(--fourthcolor);
-}
-@media(max-width: 480px){
-    .body{
-        display: grid;
-        grid-template-columns:auto;
-        grid-template-rows: 20vh  1fr auto;
-        grid-template-areas: 
-        "header"
-        "main "
-        "footer";
-        margin: 0;
-        min-height:198vh;
-    }
-    .midel{
-        display: grid;
-        grid-template-columns: auto ;
-        grid-template-rows: 50vh 80vh;
-        grid-gap: 2rem;
-        padding: 2rem;
-        grid-template-areas: 
-        "about"
-        "list";
-       
-    }
-    .about{
-        grid-area: about;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .list__padre{
+    grid-template-areas: "about" "list"; }
+    .midel .about {
+      grid-area: about;
+      justify-content: center;
+      align-items: center; }
+      .midel .about .list__padre {
         grid-area: list;
         align-items: center;
-        justify-content: space-around;
-    }
-    
-}
-/*main about fin*/
+        justify-content: space-around; } }
 
-/*main gallery inc*/
-#centro{
+/*MAIN GALLERY*/
+.centro {
+  grid-area: main;
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: 80vh 30vh;
+  grid-gap: 0rem;
+  padding: 0rem;
+  grid-template-areas: "sims" "img ";
+  min-height: 120vh; }
+  .centro .galeria {
+    grid-area: img;
+    display: flex;
+    direction: row;
+    justify-content: center;
+    align-items: start; }
+    .centro .galeria .galeria__uno .img--libro {
+      width: 18.2vh;
+      height: 12.3vh;
+      transition: all 3s cubic-bezier(0.075, 0.82, 0.165, 1); }
+      .centro .galeria .galeria__uno .img--libro:hover {
+        width: 60vh;
+        height: 35vh; }
+    .centro .galeria .galeria__uno .img--libro1 {
+      width: 18.2vh;
+      height: 12.3vh;
+      transition: all 3s cubic-bezier(0.075, 0.82, 0.165, 1); }
+      .centro .galeria .galeria__uno .img--libro1:hover {
+        width: 60vh;
+        height: 35vh; }
+    .centro .galeria .galeria__uno .img--libro2 {
+      width: 18.2vh;
+      height: 12.3vh;
+      transition: all 3s cubic-bezier(0.075, 0.82, 0.165, 1); }
+      .centro .galeria .galeria__uno .img--libro2:hover {
+        width: 60vh;
+        height: 35vh; }
+    .centro .galeria .galeria__uno .img--libro3 {
+      width: 18.2vh;
+      height: 12.3vh;
+      transition: all 3s cubic-bezier(0.075, 0.82, 0.165, 1); }
+      .centro .galeria .galeria__uno .img--libro3:hover {
+        width: 60vh;
+        height: 35vh; }
+  .centro .sims__padre {
+    grid-area: sims;
+    display: flex;
+    direction: row;
+    justify-content: center;
+    align-items: end; }
+    .centro .sims__padre #sims {
+      width: 72.5vh;
+      height: 51.3vh;
+      transition: all 3s cubic-bezier(0.075, 0.82, 0.165, 1); }
+      .centro .sims__padre #sims:hover {
+        width: 100vh;
+        height: 75vh; }
+
+@media (max-width: 480px) {
+  .centro {
     grid-area: main;
     display: grid;
-    grid-template-columns: auto ;
-    grid-template-rows: 80vh 30vh;
+    grid-template-columns: auto;
+    grid-template-rows: 40vh 1fr;
     grid-gap: 0rem;
     padding: 0rem;
-    grid-template-areas: 
-    "sims"
-    "img ";
-    min-height:120vh;
-    
-}
-
-.galeria{
-    grid-area: img;
-    justify-content: center;
-    align-items: start;
-    
-}
-
-.sims__padre{
-    grid-area: sims;
-    justify-content: center;
-    align-items: end;
-}
-
-#sims{
-    width: 72.5vh;
-    height: 51.3vh;
-    transition: all  3s cubic-bezier(0.075, 0.82, 0.165, 1);
-}
-
-#sims:hover{
-    width: 100vh;
-    height: 75vh;
-}
-
-.galeria__uno #libro{
-    width: 18.2vh;
-    height: 12.3vh;
-    transition: all  3s cubic-bezier(0.075, 0.82, 0.165, 1);
-}
-
-.galeria__uno #libro1{
-    width: 18.2vh;
-    height: 12.3vh;
-    transition: all  3s cubic-bezier(0.075, 0.82, 0.165, 1);
-}
-
-.galeria__uno #libro2{
-    width: 18.2vh;
-    height: 12.3vh;
-    transition: all  3s cubic-bezier(0.075, 0.82, 0.165, 1);
-}
-
-
-.galeria__uno #libro3{
-    width: 18.2vh;
-    height: 12.3vh;
-    transition: all  3s cubic-bezier(0.075, 0.82, 0.165, 1);
-}
-
-.galeria__uno #libro:hover,
-.galeria__uno #libro1:hover,
-.galeria__uno #libro2:hover,
-.galeria__uno #libro3:hover{
-    width: 60vh;
-    height: 35vh;
-}
-
-@media(max-width: 480px) {
-    #centro{
-        grid-area: main;
-        display: grid;
-        grid-template-columns: auto;
-        grid-template-rows: 40vh 1fr ;
-        grid-gap: 0rem;
-        padding: 0rem;
-        grid-template-areas: 
-        "sims"
-        "img ";
-    }
-
-    .sims__padre{
-        grid-area: sims;
-        justify-content: center;
-        align-items: end;
-    }
-
-    .galeria__uno{
-        grid-area: img;  
-        display: flex;
-        flex-direction: column;
-          
-    }
-
-    #sims{
+    grid-template-areas: "sims" "img "; }
+    .centro .sims__padre {
+      grid-area: sims;
+      justify-content: center;
+      align-items: end; }
+      .centro .sims__padre #sims {
         width: 32.6vh;
         height: 23.1vh;
-        transition: all  3s cubic-bezier(0.075, 0.82, 0.165, 1);
-    }
+        transition: all 3s cubic-bezier(0.075, 0.82, 0.165, 1); }
+        .centro .sims__padre #sims:hover {
+          width: 50vh;
+          height: 35vh; }
+    .centro .galeria__uno {
+      grid-area: img;
+      display: flex;
+      flex-direction: column; }
+      .centro .galeria__uno #libro {
+        width: 32.6vh;
+        height: 23.1vh;
+        transition: all 3s cubic-bezier(0.075, 0.82, 0.165, 1); }
+        .centro .galeria__uno #libro:hover {
+          width: 50vh;
+          height: 35vh; }
+      .centro .galeria__uno #libro1 {
+        width: 32.6vh;
+        height: 23.1vh;
+        transition: all 3s cubic-bezier(0.075, 0.82, 0.165, 1); }
+        .centro .galeria__uno #libro1:hover {
+          width: 50vh;
+          height: 35vh; }
+      .centro .galeria__uno #libro2 {
+        width: 32.6vh;
+        height: 23.1vh;
+        transition: all 3s cubic-bezier(0.075, 0.82, 0.165, 1); }
+        .centro .galeria__uno #libro2:hover {
+          width: 50vh;
+          height: 35vh; }
+      .centro .galeria__uno #libro3 {
+        width: 32.6vh;
+        height: 23.1vh;
+        transition: all 3s cubic-bezier(0.075, 0.82, 0.165, 1); }
+        .centro .galeria__uno #libro3:hover {
+          width: 50vh;
+          height: 35vh; } }
 
-    #sims:hover{
-        width: 50vh;
-        height: 35vh;
-    }
-    
-    .galeria__uno #libro{
-        width: 32.6vh;
-        height: 23.1vh;
-        transition: all  3s cubic-bezier(0.075, 0.82, 0.165, 1)
-    }
-    
-    .galeria__uno #libro1{
-        width: 32.6vh;
-        height: 23.1vh;
-        transition: all  3s cubic-bezier(0.075, 0.82, 0.165, 1)
-    }
-    
-    .galeria__uno #libro2{
-        width: 32.6vh;
-        height: 23.1vh;
-        transition: all  3s cubic-bezier(0.075, 0.82, 0.165, 1)
-    }
-    
-    
-    .galeria__uno #libro3{
-        width: 32.6vh;
-        height: 23.1vh;
-        transition: all  3s cubic-bezier(0.075, 0.82, 0.165, 1)
-    }
-
-    .galeria__uno #libro:hover,
-    .galeria__uno #libro1:hover,
-    .galeria__uno #libro2:hover,
-    .galeria__uno #libro3:hover{
-        width: 50vh;
-        height: 35vh;
-    }
-}
-/*main gallery fin*/
-
+/*MAIN CONTACT*/
 /*main contact inc*/
-.main__contact{
+.main__contact {
+  grid-area: main;
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: auto auto auto auto auto auto 1fr auto;
+  grid-gap: 0rem;
+  padding: 0rem;
+  grid-template-areas: "nombre  " "email   " "selec   " "serv    " "neg     " "point   " "tex     " "boton   ";
+  min-height: 100vh; }
+  .main__contact #from > * {
+    padding: 4rem;
+    display: flex;
+    direction: row;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-style: normal; }
+    .main__contact #from > * .complet--name {
+      justify-content: space-between;
+      padding: 2rem; }
+    .main__contact #from > * .complet--email {
+      justify-content: space-between;
+      padding: 2rem; }
+    .main__contact #from > * .name {
+      grid-area: nombre;
+      display: flex;
+      direction: row;
+      flex-direction: row; }
+      .main__contact #from > * .name #username, .main__contact #from > * .name #empresa {
+        width: 20.8rem;
+        height: 4.2rem;
+        border: none; }
+    .main__contact #from > * .email {
+      grid-area: email;
+      display: flex;
+      direction: row; }
+      .main__contact #from > * .email #email, .main__contact #from > * .email #telefono {
+        width: 20.8rem;
+        height: 4.2rem;
+        border: none; }
+    .main__contact #from > * .selec {
+      grid-area: selec;
+      display: flex;
+      direction: row; }
+      .main__contact #from > * .selec #selec h4 {
+        color: #FF33FF;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 3.6em;
+        line-height: 4.2rem;
+        transition: color .6s ease-out; }
+        .main__contact #from > * .selec #selec h4:hover {
+          color: #00D0AB; }
+    .main__contact #from > * .serv {
+      grid-area: serv;
+      display: flex;
+      direction: row;
+      justify-content: space-between;
+      padding: 2rem;
+      font-weight: 400;
+      font-size: 1.8em;
+      line-height: 2.1rem; }
+    .main__contact #from > * .neg {
+      grid-area: neg;
+      display: flex;
+      direction: row;
+      padding: 2rem;
+      line-height: 2.8rem; }
+      .main__contact #from > * .neg #menu label {
+        font-style: normal;
+        font-weight: 700;
+        font-size: 3.6em;
+        line-height: 4.2rem;
+        color: #FF33FF;
+        transition: color .6s ease-out; }
+        .main__contact #from > * .neg #menu label:hover {
+          color: #00D0AB; }
+    .main__contact #from > * .point {
+      grid-area: point;
+      display: flex;
+      direction: row;
+      padding: 2rem;
+      font-weight: 400;
+      font-size: 2.4em;
+      line-height: 2.8rem; }
+    .main__contact #from > * .text {
+      grid-area: text;
+      display: flex;
+      direction: row;
+      padding: 2rem; }
+    .main__contact #from > * .boton {
+      grid-area: boton;
+      display: flex;
+      direction: row;
+      padding: 2rem; }
+      .main__contact #from > * .boton .btn--send {
+        background-color: #ff33ff;
+        height: 3rem;
+        width: 13rem; }
+      .main__contact #from > * .boton .btn--reset {
+        background-color: #00D0AB;
+        height: 3rem;
+        width: 13rem; }
+
+@media (max-width: 480px) {
+  .main__contact {
     grid-area: main;
     display: grid;
-    grid-template-columns: auto ;
+    grid-template-columns: auto;
     grid-template-rows: auto auto auto auto auto auto 1fr auto;
     grid-gap: 0rem;
     padding: 0rem;
-    grid-template-areas: 
-    "nombre  "
-    "email   "
-    "selec   "
-    "serv    "
-    "neg     "
-    "point   "
-    "tex     "
-    "boton   ";
-    min-height:100vh;
-}
-#from > *{
-    padding: 4rem;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-style: normal;
-}
+    grid-template-areas: "nombre  " "email   " "selec   " "serv    " "neg     " "point   " "tex     " "boton   ";
+    min-height: 200vh; }
+    .main__contact .name {
+      grid-area: nombre;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 6rem; }
+    .main__contact .email {
+      grid-area: email;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 6rem; }
+    .main__contact .selec {
+      grid-area: selec;
+      padding: 6rem; }
+    .main__contact .serv {
+      grid-area: serv;
+      padding: 6rem; }
+    .main__contact .neg {
+      grid-area: neg;
+      padding: 6rem; }
+    .main__contact .point {
+      grid-area: point;
+      padding: 6rem; }
+    .main__contact .text {
+      grid-area: text;
+      padding: 6rem; }
+    .main__contact .boton {
+      grid-area: boton;
+      padding: 6rem; } }
 
-.name{
-    grid-area: nombre;
-    flex-direction: row;
-    justify-content: space-between;
-    padding: 2rem;
-}
-
-#username, 
-#telefono, 
-#empresa, 
-#email{
-    width: 20.8rem;
-    height: 4.2rem;
-    border: none;  
-}
-
-.email{
-    grid-area: email;
-    justify-content: space-between;
-    padding: 2rem;
-}
-
-.serv {
-    grid-area: serv;
-    justify-content: space-between;
-    padding: 2rem;
-    font-weight: 400;
-    font-size: 1.8em;
-    line-height: 2.1rem;
-
-}
-
-.selec{
-    grid-area: selec;
-}
-
-#selec h4{
-    color: var(--firstcolor);
-    font-style: normal;
-    font-weight: 700;
-    font-size: var(--firstfountsize);
-    line-height: 4.2rem;
-    transition: color .6s ease-out;
-} 
-
-.neg #menu label{   
-    font-style: normal;
-    font-weight: 700;
-    font-size: var(--firstfountsize);
-    line-height: 4.2rem;
-    color: var(--firstcolor);
-    transition: color .6s ease-out;
-}
-
-#selec h4:hover, 
-.neg #menu label:hover{
-    color: var(--secondcolor);
-}
-
-.neg{
-    grid-area: neg;
-    padding: 2rem;
-    line-height: 2.8rem;
-}
-
-.point{
-    grid-area: point;
-    padding: 2rem;
-    font-weight: 400;
-    font-size: 2.4em;
-    line-height: 2.8rem;
-}
-
-.text{
-    grid-area: text;
-    padding: 2rem;
-}
-
-.boton{
-    grid-area: boton;
-    padding: 2rem;
-}
-
-@media(max-width: 480px){
-    .main__contact{
-        grid-area: main;
-        display: grid;
-        grid-template-columns: auto ;
-        grid-template-rows: auto auto auto auto auto auto 1fr auto;
-        grid-gap: 0rem;
-        padding: 0rem;
-        grid-template-areas: 
-        "nombre  "
-        "email   "
-        "selec   "
-        "serv    "
-        "neg     "
-        "point   "
-        "tex     "
-        "boton   ";
-        min-height:200vh;
-    }
-    
-    .name{
-        grid-area: nombre;
-        flex-direction: column;
-        justify-content: space-between;
-        padding: 6rem;   
-    }
-
-    .email{
-        grid-area: email;
-        flex-direction: column;
-        justify-content: space-between;
-        padding: 6rem;
-    }
-
-    .selec{
-        grid-area: selec;
-        padding: 6rem;
-    }
-
-    .serv{
-        grid-area: serv;
-        padding: 6rem;
-    }
-
-    .neg{
-        grid-area: neg;
-        padding: 6rem;
-    }
-
-    .point{
-        grid-area: point;
-        padding: 6rem;
-    }
-
-    .text{
-        grid-area: text;
-        padding: 6rem;
-    }
-
-    .boton{
-        grid-area: boton;
-        padding: 6rem;
-    }
-}
-/*main contact fin*/
-
-/*main service fin*/
-.main__service{
-    grid-area: main;
-    display: grid;
-    grid-template-columns: 1fr ;
-        grid-template-rows: 10vh 20vh 20vh 20vh;
-        grid-gap: 10px;
-        padding: 10px;
-        grid-template-areas:
-        "ser" 
-        "ser__1"
-        "ser__2"
-        "ser__3";
-        min-height:100vh;
-}
-
-.titel__service{
+/*MAIN SERVICE*/
+.main__service {
+  grid-area: main;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 10vh 20vh 20vh 20vh;
+  grid-gap: 10px;
+  padding: 10px;
+  grid-template-areas: "ser"  "ser__1" "ser__2" "ser__3";
+  min-height: 100vh; }
+  .main__service .titel__service {
     grid-area: ser;
-    justify-content: center;
-}
-
-.sevicio__one{
+    display: flex;
+    direction: row;
+    justify-content: center; }
+  .main__service .servicio__one {
     grid-area: ser__1;
-}
-
-
-.servicio__two{
+    display: flex;
+    direction: column; }
+    .main__service .servicio__one article p {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      font-style: normal;
+      font-size: 1.2em;
+      line-height: 1.4rem;
+      color: black;
+      padding-left: 20rem; }
+    .main__service .servicio__one article h3 {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      font-style: normal;
+      font-weight: 700;
+      font-size: 2em;
+      line-height: 4rem;
+      color: #FF33FF;
+      padding-left: 17rem;
+      transition: color .6s ease-out; }
+      .main__service .servicio__one article h3:hover {
+        color: #00D0AB; }
+  .main__service .servicio__two {
     grid-area: ser__2;
-}
-
-.servicio__three{
+    display: flex;
+    direction: column; }
+    .main__service .servicio__two article p {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      font-style: normal;
+      font-size: 1.2em;
+      line-height: 1.4rem;
+      color: black;
+      padding-left: 20rem; }
+    .main__service .servicio__two article h3 {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      font-style: normal;
+      font-weight: 700;
+      font-size: 2em;
+      line-height: 4rem;
+      color: #FF33FF;
+      padding-left: 17rem;
+      transition: color .6s ease-out; }
+      .main__service .servicio__two article h3:hover {
+        color: #00D0AB; }
+  .main__service .servicio__three {
     grid-area: ser__3;
-}
-
-.servicio__one article p, 
-.servicio__two article p, 
-.servicio__three article p{
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-style: normal;
-    font-size: var(--secondfoutnsize);
-    line-height: 1.4rem;
-    color: var(--fourthcolor);
-    padding-left: 20rem;   
-}
-
-.servicio__one article h3, 
-.servicio__two article h3, 
-.servicio__three article h3{
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-style: normal;
-    font-weight: 700;
-    font-size: 2em;
-    line-height: 4rem;
-    color: var(--firstcolor);
-    padding-left: 17rem;
-    transition: color .6s ease-out;
-}
-
-.servicio__one article h3:hover, 
-.servicio__two article h3:hover, 
-.servicio__three article h3:hover{
-    color: var(--secondcolor);
-}
-
-.service__h2{
+    display: flex;
+    direction: column; }
+    .main__service .servicio__three article p {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      font-style: normal;
+      font-size: 1.2em;
+      line-height: 1.4rem;
+      color: black;
+      padding-left: 20rem; }
+    .main__service .servicio__three article h3 {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      font-style: normal;
+      font-weight: 700;
+      font-size: 2em;
+      line-height: 4rem;
+      color: #FF33FF;
+      padding-left: 17rem;
+      transition: color .6s ease-out; }
+      .main__service .servicio__three article h3:hover {
+        color: #00D0AB; }
+  .main__service .service__h2 {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-style: normal;
     font-weight: 700;
     font-size: 4em;
     line-height: 4rem;
-    color: var(--secondcolor);
-    transition: color .6s ease-out;
-}
+    color: #00D0AB;
+    transition: color .6s ease-out; }
+    .main__service .service__h2:hover {
+      color: #FF33FF; }
 
-.service__h2:hover{
-    color: var(--firstcolor);
-}
+@media (max-width: 480px) {
+  .main__service {
+    grid-gap: 20rem;
+    padding: 1rem; }
+    .main__service .servicio__one article p {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      font-style: normal;
+      font-size: 1.2em;
+      line-height: 1.4rem;
+      color: black;
+      padding-left: 3rem; }
+    .main__service .servicio__one article h3 {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      font-style: normal;
+      font-weight: 700;
+      font-size: 2em;
+      line-height: 4rem;
+      color: #FF33FF;
+      padding-left: 3rem; }
+    .main__service .servicio__two article p {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      font-style: normal;
+      font-size: 1.2em;
+      line-height: 1.4rem;
+      color: black;
+      padding-left: 3rem; }
+    .main__service .servicio__two article h3 {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      font-style: normal;
+      font-weight: 700;
+      font-size: 2em;
+      line-height: 4rem;
+      color: #FF33FF;
+      padding-left: 3rem; }
+    .main__service .servicio__three article p {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      font-style: normal;
+      font-size: 1.2em;
+      line-height: 1.4rem;
+      color: black;
+      padding-left: 3rem; }
+    .main__service .servicio__three article h3 {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      font-style: normal;
+      font-weight: 700;
+      font-size: 2em;
+      line-height: 4rem;
+      color: #FF33FF;
+      padding-left: 3rem; } }
 
-@media(max-width: 480px){
-
-    .main__service{ 
-        grid-gap: 20rem;
-        padding: 1rem;       
-    }
-
-    .servicio__one article p, 
-    .servicio__two article p, 
-    .servicio__three article p{
-        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-        font-style: normal;
-        font-size: var(--secondfoutnsize);
-        line-height: 1.4rem;
-        color: var(--fourthcolor);
-        padding-left: 3rem;
-    }
-
-    .servicio__one article h3, 
-    .servicio__two article h3, 
-    .servicio__three article h3{
-        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-        font-style: normal;
-        font-weight: 700;
-        font-size: 2em;
-        line-height: 4rem;
-        color: var(--firstcolor);
-        padding-left: 3rem;    
-    }
-}
-/*main contact fin*/
-
-/*footerx inc*/
-footer{
-    grid-area: footer;
-    background-color: var(--fourthcolor);
-}
-
-footer .nav{
+/*FOOTER*/
+footer {
+  grid-area: footer;
+  background-color: black; }
+  footer .nav {
     align-items: center;
     padding: 0 2rem;
     min-height: 15vh;
     justify-content: space-between;
-}
-
-footer  .menu-second__item{
-    transition: border-inline .3s ease-in;
-}
-
-.menu-second .menu-second__item:hover{
-    border-inline: 0.2rem solid var(--thirdcolor);
-}
-
-footer .menu-second{
+    display: flex;
+    direction: row; }
+  footer .menu-second {
     flex-basis: 40%;
     justify-content: space-between;
-}
+    display: flex;
+    direction: row; }
+    footer .menu-second__item {
+      transition: border-inline .3s ease-in; }
+      footer .menu-second__item:hover {
+        border-inline: 0.2rem solid #ffff; }
+    footer .menu-second__link {
+      padding: 1rem; }
 
-.menu-second .menu-second__item .menu-second__link{
-    padding: 1rem;
-}
-/*footer fin */
+@media (max-width: 480px) {
+  .menu-second__link {
+    font-size: 1.5em; } }

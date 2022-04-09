@@ -1,4 +1,3 @@
-
 .main__service{
     grid-area: main;
     display: grid;
@@ -13,73 +12,20 @@
     "ser__3";
      min-height:100vh;
 
-     .titel__service{
+    .titel__service{
         grid-area: ser;
+        @include flex (flex, row);
         justify-content: center;
     }
 
     .servicio__one{
         grid-area: ser__1;
+        @include flex (flex, column);
         article{
             p{
                 font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
                 font-style: normal;
-                font-size: $secondfoutnsize;
-                line-height: 1.4rem;
-                color: $fourthcolor;
-                padding-left: 20rem;   
-            }
-             h3{
-                font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-                font-style: normal;
-                font-weight: 700;
-                font-size: 2em;
-                line-height: 4rem;
-                color: $firstcolor;
-                padding-left: 17rem;
-                transition: color .6s ease-out;
-               
-            }
-
-        }
-    }
-
-
-        
-
-     .servicio__two{
-        grid-area: ser__2;
-
-        article{
-            p{
-                font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-                font-style: normal;
-                font-size: $secondfoutnsize;
-                line-height: 1.4rem;
-                color: $fourthcolor;
-                padding-left: 20rem;   
-            }
-             h3{
-                font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-                font-style: normal;
-                font-weight: 700;
-                font-size: 2em;
-                line-height: 4rem;
-                color: $firstcolor;
-                padding-left: 17rem;
-                transition: color .6s ease-out;
-               
-            }
-        }    
-    }
-        
-    .servicio__three{
-        grid-area: ser__3;
-        article{
-            p{
-                font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-                font-style: normal;
-                font-size: $secondfoutnsize;
+                font-size: map-get($fountsize, second );
                 line-height: 1.4rem;
                 color: $fourthcolor;
                 padding-left: 20rem;   
@@ -93,6 +39,75 @@
                 color: $firstcolor;
                 padding-left: 17rem;
                 transition: color .6s ease-out;
+
+                &:hover{
+                    color: $secondcolor;
+                }
+               
+            }
+
+        }
+    }
+
+
+        
+
+     .servicio__two{
+        grid-area: ser__2;
+        @include flex (flex, column);
+
+        article{
+            p{
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+                font-style: normal;
+                font-size: map-get($fountsize, second );
+                line-height: 1.4rem;
+                color: $fourthcolor;
+                padding-left: 20rem;   
+            }
+             h3{
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+                font-style: normal;
+                font-weight: 700;
+                font-size: 2em;
+                line-height: 4rem;
+                color: $firstcolor;
+                padding-left: 17rem;
+                transition: color .6s ease-out;
+
+                &:hover{
+                    color: $secondcolor;
+                }
+            
+            }
+        }    
+    }
+        
+    .servicio__three{
+        grid-area: ser__3;
+        @include flex (flex, column);
+        article{
+            p{
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+                font-style: normal;
+                font-size: map-get($fountsize, second );
+                line-height: 1.4rem;
+                color: $fourthcolor;
+                padding-left: 20rem;   
+            }
+            h3{
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+                font-style: normal;
+                font-weight: 700;
+                font-size: 2em;
+                line-height: 4rem;
+                color: $firstcolor;
+                padding-left: 17rem;
+                transition: color .6s ease-out;
+
+                &:hover{
+                    color: $secondcolor;
+                }
             }
         }
     }
@@ -107,7 +122,7 @@
         transition: color .6s ease-out;
 
         &:hover{
-            color: $secondcolor;
+            color: $firstcolor
         }
     }
 
@@ -124,7 +139,7 @@
                 p{
                     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
                     font-style: normal;
-                    font-size: $secondfoutnsize;
+                    font-size: map-get($fountsize, second );
                     line-height: 1.4rem;
                     color: $fourthcolor;
                     padding-left: 3rem;
@@ -139,9 +154,7 @@
                     color: $firstcolor;
                     padding-left: 3rem; 
                      
-                    &:hover{
-                        color: $secondcolor;
-                    }  
+                    
                 }
             }
         }
@@ -152,7 +165,7 @@
                 p{
                     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
                     font-style: normal;
-                    font-size: $secondfoutnsize;
+                    font-size: map-get($fountsize, second );
                     line-height: 1.4rem;
                     color: $fourthcolor;
                     padding-left: 3rem;
@@ -166,9 +179,8 @@
                     line-height: 4rem;
                     color: $firstcolor;
                     padding-left: 3rem; 
-                    &:hover{
-                        color: $secondcolor;
-                    }   
+                    
+                     
                 }
             }
         }
@@ -179,7 +191,7 @@
                 p{
                     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
                     font-style: normal;
-                    font-size: $secondfoutnsize;
+                    font-size: map-get($fountsize, second );
                     line-height: 1.4rem;
                     color: $fourthcolor;
                     padding-left: 3rem;
@@ -193,12 +205,9 @@
                     line-height: 4rem;
                     color: $firstcolor;
                     padding-left: 3rem;
-                    &:hover{
-                        color: $secondcolor;
-                    }    
+                   
                 }
             }
         }
     }
-
 }

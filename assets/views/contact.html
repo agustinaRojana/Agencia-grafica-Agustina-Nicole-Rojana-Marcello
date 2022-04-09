@@ -6,12 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>contacto</title>
     <!--link de css-->
-    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/index.css">
 </head>
 <body class="body">
     <!--comienzo del header-->
     <header>
-        <nav class="navbar flex-row conteiner">
+        <nav class="navbar flex-row">
             <picture class="logo">
                 <img width="100" height="73" src="../image/logo_mesa-de-trabajo-1.png" alt="logo de la marca">
             </picture>
@@ -37,11 +37,11 @@
     <!--fin del header-->
     <!--comienzo del main-->
     <main class="main__contact conteiner">
-        <section id="from" class="flex-row"> 
+        <section id="from"> 
             <div>
                 <form action=""method="POST" class="from">
                     <ul>
-                        <div class="name flex-row">
+                        <div class="name complet--name">
                             <li id="name">
                                 <input type="text" name="username" id="username" placeholder="Nombre completo" required="true">
                             </li>
@@ -49,7 +49,7 @@
                                 <input type="text" name="empresa" id="empresa" placeholder="Nombre de la empresa" required="true">
                             </li>
                         </div>
-                        <div class="email flex-row">
+                        <div class="email complet--email">
                             <li id="email">
                                 <input type="email" name="email" id="email" placeholder="Email" required="true">
                             </li>
@@ -57,12 +57,12 @@
                                 <input type="number" name="telefono" id="telefono" placeholder="Telefono" required="true">
                             </li>
                         </div>
-                        <div class="selec flex-row">
+                        <div class="selec">
                             <li id="selec">
                                 <h4>Selecciona un servicio</h4>
                             </li>
                         </div>
-                        <div class="serv flex-row">
+                        <div class="serv">
                             <li id="op1">
                                 <label for="seleccionunica">
                                     Servicio 
@@ -82,7 +82,7 @@
                                 <input type="radio" name="seleccionunica" id="seleccionunica" required="true">
                             </li>
                         </div>
-                        <div class="neg flex-row">
+                        <div class="neg">
                             <li id="menu"> 
                                 <label for="empresauno">
                                     Negocio
@@ -92,7 +92,7 @@
                                     <option value="Pime">Pime</option>
                                 </select></li>  
                         </div>
-                        <div class="point flex-row">
+                        <div class="point">
                             <li id="quiero">
                                 <label for="acepta">
                                     Quiero resivir informacios de nuevos servicios y ofertas
@@ -100,21 +100,21 @@
                                 <input class="op4" type="checkbox" name="acepta" id="acepta">
                             </li>
                         </div>
-                        <div class="text flex-row">
+                        <div class="text">
                             <li id="text">
                                 <textarea name="aclaraciones" id="aclaraciones" cols="65" rows="14">
                                     Dejanos un mensaje
                                 </textarea>
                             </li>
                         </div>
-                        <div class="boton flex-row">
-                            <li id="env">
-                                <button type="submit">
+                        <div class="boton">
+                            <li >
+                                <button class="btn--send" type="submit">
                                     Enviar
                                 </button>
                             </li>
-                            <li id="reset">
-                                <button type="reset">
+                            <li >
+                                <button class="btn--reset" type="reset">
                                     Resetear formulario
                                 </button>
                             </li>
@@ -127,7 +127,7 @@
     <!--fin del main-->
     <!--comienzo del footer-->
     <footer id="footerFlex" >
-        <nav class="nav flex-row conteiner">
+        <nav class="nav flex-row">
             <ul class="menu-second flex-row">
                 <li class="menu-second__item">
                     <a class="menu-second__link" href="./contact.html">Contacto</a>

@@ -3,5 +3,25 @@ $firstcolor:#FF33FF;
 $secondcolor:#00D0AB;
 $thirdcolor:#ffff;
 $fourthcolor:black;
-$firstfountsize: 3.6em;
-$secondfoutnsize: 1.2em;
+$botons:(
+    send:#ff33ff,
+    reset:#00D0AB
+);
+$pictures:(
+    libro:"portada_libro",
+    libro1:"indece_libro",
+    libro2:"caratula_libro",
+    libro3:"pagina_libro"
+);
+
+$complet:(
+    name:"name",
+    email:"email"
+);
+
+$fountsize:(
+    first:3.6em,
+    second:1.2em,
+    third:2.4em,
+    fourth:1.8em
+);
